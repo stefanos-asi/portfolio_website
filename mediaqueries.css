@@ -15,6 +15,33 @@
     #hamburger-nav {
         display:flex;
     }
+/* Make all project cards the same height and align content vertically */
+.details-container.color-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 450px; /* adjust so both cards are tall enough */
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Keep image and title at the top */
+.details-container.color-container .article-container {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.details-container.color-container h2.project-title {
+  margin: 1rem 0;
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+/* Push the button row to the very bottom */
+.details-container.color-container .btn-container {
+  margin-top: auto;
+}
 
 
 #experience,.experience-details-container {
@@ -106,4 +133,5 @@ section {
     .text-container {
         text-align: justify;
     }
+    
 }
