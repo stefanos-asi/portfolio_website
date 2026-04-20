@@ -430,7 +430,6 @@ article.skill-pill .icon {
   height: 1.2rem;
   width: 1.2rem;
   flex-shrink: 0;
-  /* tint checkmark to accent colour */
   filter: invert(34%) sepia(90%) saturate(1500%) hue-rotate(207deg) brightness(1.1);
 }
 
@@ -573,3 +572,68 @@ footer p {
 }
 
 footer nav { height: fit-content; }
+
+/* ─────────────────────────────────────────────
+   PROJECT GROUP HEADER
+   ───────────────────────────────────────────── */
+.project-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.project-group-header {
+  text-align: center;
+  padding: 1.75rem 2rem;
+  background: linear-gradient(135deg, var(--clr-accent-lt) 0%, var(--clr-accent-2-lt) 100%);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--clr-border);
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle decorative line */
+.project-group-header::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--clr-accent), var(--clr-accent-2));
+}
+
+.project-group-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--clr-accent);
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-accent);
+  border-radius: 2rem;
+  padding: 0.25rem 0.85rem;
+  margin-bottom: 0.65rem;
+}
+
+.project-group-title {
+  font-family: "DM Serif Display", serif;
+  font-size: 1.9rem;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  color: var(--clr-ink);
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.project-group-title em {
+  font-style: italic;
+  color: var(--clr-accent);
+}
+
+.project-group-desc {
+  font-size: 0.92rem;
+  color: var(--clr-muted);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
